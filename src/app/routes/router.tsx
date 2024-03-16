@@ -5,6 +5,7 @@ import { Layout } from 'src/pages/layout/layout';
 import { RandomizerPage } from 'src/pages/randomizer-page';
 import { SchoolsPage } from 'src/pages/schools-page';
 import { UpgradesPage } from 'src/pages/upgrades-page';
+import { BASE_URL } from 'src/shared/constants';
 import { paths } from 'src/shared/paths';
 
 export const router = createBrowserRouter([
@@ -30,4 +31,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-], { basename: import.meta.env.DEV ? '/' : '/brw-r/' });
+], { basename: import.meta.env.DEV ? '/' : BASE_URL });
