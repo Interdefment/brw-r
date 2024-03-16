@@ -1,5 +1,0 @@
-export * from './events'
-export * from './jinxes'
-export * from './quests'
-export * from './schools'
-export * from './updagrades'

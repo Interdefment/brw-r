@@ -1,5 +1,6 @@
-import { MagicSchoolType } from "../magic-school";
-import { BaseCard, CardType, EffectTarget } from "src/shared/types";
+import { BaseCard, CardType, EffectTarget } from 'src/shared/types';
+
+import { MagicSchoolType } from '../magic-school';
 
 export enum SpellType {
   Combat,
@@ -23,7 +24,7 @@ export interface SpellSide {
   type: SpellType;
   element: SpellElement;
   target: EffectTarget;
-  description: string
+  description: string;
 }
 
 interface SpellCard extends BaseCard<CardType.Spell> {

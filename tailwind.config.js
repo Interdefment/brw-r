@@ -6,7 +6,11 @@ export default {
     './node_modules/primereact/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'background': '#f1f3f5',
+      },
+    },
   },
   plugins: [],
 };

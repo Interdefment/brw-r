@@ -4,7 +4,7 @@ export enum MagicSchoolType {
   Hex = 'hex',
   Alchemy = 'alchemy',
   Shamanic = 'shamanic',
-  Necromancy = 'necromancy',
+  Technomancy = 'technomancy',
   Forgotten = 'forgotten',
 }
 

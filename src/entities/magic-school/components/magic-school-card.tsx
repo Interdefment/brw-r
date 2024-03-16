@@ -8,7 +8,7 @@ interface MagicSchoolCardProps {
 
 export const MagicSchoolCard: React.FC<MagicSchoolCardProps> = ({ school }) => {
   return (
-    <Card title={school.name}>
+    <Card pt={{ root: { className: 'max-w-80' } }} title={school.name}>
       <p>
         {school.description}
       </p>

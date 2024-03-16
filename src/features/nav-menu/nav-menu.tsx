@@ -8,6 +8,7 @@ import { Sidebar } from 'primereact/sidebar';
 import { useNavigate } from 'react-router-dom';
 
 import { paths } from 'src/shared/paths';
+import { Path } from 'src/shared/types';
 
 export const NavMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,22 +19,21 @@ export const NavMenu: React.FC = () => {
 
   const navigate = useNavigate();
 
-  const getMenuItemCommand = (path: string) => {
-    return () => {
-      closeMenu();
-      navigate(path);
+  const getMenuItem = (path: Path): MenuItem => {
+    return {
+      label: path.label,
+      command: () => {
+        closeMenu();
+        navigate(path.generatePath());
+      },
     };
   };
 
   const menuItems: MenuItem[] = [
-    {
-      label: 'Главная',
-      command: getMenuItemCommand(paths.root.generatePath()),
-    },
-    {
-      label: 'Школы',
-      command: getMenuItemCommand(paths.schools.generatePath()),
-    },
+    getMenuItem(paths.root),
+    getMenuItem(paths.schools),
+    getMenuItem(paths.upgrades),
+    getMenuItem(paths.jinxes),
   ];
 
   return (
