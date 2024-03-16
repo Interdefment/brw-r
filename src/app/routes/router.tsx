@@ -30,4 +30,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+], { basename: import.meta.env.DEV ? '/' : '/brw-r/' });
