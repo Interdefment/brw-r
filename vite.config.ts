@@ -9,12 +9,4 @@ export default defineConfig({
       src: '/src',
     },
   },
-  // css: {
-  //   postcss: {
-  //     plugins: [
-  //       tailwindcss
-  //     autoprefixer
-  //     ]
-  //   }
-  // }
 });
