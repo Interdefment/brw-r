@@ -11,7 +11,7 @@ const getBasePath = (path: string, label: string): Path => {
 };
 
 export const paths = {
-  root: getBasePath('/', 'Главная'),
+  randomizer: getBasePath('/', 'Рандомайзер'),
   schools: getBasePath('/schools', 'Школы магии'),
   upgrades: getBasePath('/upgrades', 'Апгрейды'),
   jinxes: getBasePath('/jinxes', 'Проклятья'),

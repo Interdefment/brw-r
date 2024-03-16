@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { JinxesPage } from 'src/pages/jinxes-page';
 import { Layout } from 'src/pages/layout/layout';
-import { MainPage } from 'src/pages/main-page';
+import { RandomizerPage } from 'src/pages/randomizer-page';
 import { SchoolsPage } from 'src/pages/schools-page';
 import { UpgradesPage } from 'src/pages/upgrades-page';
 import { paths } from 'src/shared/paths';
@@ -13,8 +13,8 @@ export const router = createBrowserRouter([
     element: (<Layout />),
     children: [
       {
-        path: paths.root.path,
-        element: (<MainPage />),
+        path: paths.randomizer.path,
+        element: (<RandomizerPage />),
       },
       {
         path: paths.schools.path,

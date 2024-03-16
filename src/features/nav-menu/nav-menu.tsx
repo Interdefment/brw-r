@@ -30,7 +30,7 @@ export const NavMenu: React.FC = () => {
   };
 
   const menuItems: MenuItem[] = [
-    getMenuItem(paths.root),
+    getMenuItem(paths.randomizer),
     getMenuItem(paths.schools),
     getMenuItem(paths.upgrades),
     getMenuItem(paths.jinxes),
@@ -38,7 +38,15 @@ export const NavMenu: React.FC = () => {
 
   return (
     <>
-      <Sidebar visible={isOpen} onHide={() => setIsOpen(false)}>
+      <Sidebar
+        header={() => (
+          <div className='flex flex-start w-full text-lg font-bold'>
+            BRW: Rebirth
+          </div>
+        )}
+        visible={isOpen}
+        onHide={() => setIsOpen(false)}
+      >
         <Menu model={menuItems} pt={{
           root: {
             className: 'border-0 w-full',
